@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<p>This is a list of solar gardens in the US</p>
+	<ul>
+	  {% for garden in gardens %}
+	    <li><a href="{{ url_for('show', index=garden.index) }}">{{ garden.Project_Name }}</a></li>
+	  {% endfor %}
+	</ul>
+{% endblock %}
